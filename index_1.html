@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arshan Ali Khan | Regional Coordinator, Lucknow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#101d3e;
+    --navy-deep:#0a1329;
+    --gold:#c9a34e;
+    --gold-soft:#f3e6c4;
+    --cream:#f7f4ec;
+    --ink:#1c2540;
+    --slate:#5a6178;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;}
+
+  /* Header / nav */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--navy);
+    border-bottom:2px solid var(--gold);
+  }
+  .nav-inner{
+    max-width:1100px;margin:0 auto;padding:14px 24px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{color:var(--gold-soft);font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;letter-spacing:0.02em;}
+  .brand span{color:var(--gold);}
+  nav ul{list-style:none;display:flex;gap:22px;}
+  nav a{color:#cfd6ea;text-decoration:none;font-size:0.88rem;font-weight:500;transition:color 0.2s;}
+  nav a:hover{color:var(--gold);}
+  .nav-cta{
+    background:var(--gold);color:var(--navy-deep);padding:9px 18px;border-radius:3px;
+    font-weight:600;font-size:0.85rem;text-decoration:none;white-space:nowrap;
+  }
+  @media (max-width:760px){ nav ul{display:none;} }
+
+  /* Hero */
+  .hero{
+    background:
+      radial-gradient(circle at 85% 20%, rgba(201,163,78,0.14), transparent 45%),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+    color:#fff;padding:80px 24px 70px;position:relative;overflow:hidden;
+    border-bottom:4px solid var(--gold);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:12px;border:1px solid rgba(201,163,78,0.35);pointer-events:none;
+  }
+  .hero-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:50px;flex-wrap:wrap;}
+  .hero-text{flex:1 1 420px;}
+  .eyebrow{
+    color:var(--gold);font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.05;font-weight:700;margin-bottom:14px;}
+  .hero .role{font-size:1.15rem;color:var(--gold-soft);font-weight:500;margin-bottom:22px;}
+  .hero blockquote{
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;color:#fff;
+    border-left:3px solid var(--gold);padding-left:18px;max-width:480px;margin-bottom:30px;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--gold);color:var(--navy-deep);padding:13px 26px;border-radius:3px;
+    font-weight:700;text-decoration:none;font-size:0.92rem;display:inline-flex;align-items:center;gap:8px;
+    transition:transform 0.2s;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-secondary{
+    border:1px solid rgba(255,255,255,0.4);color:#fff;padding:13px 26px;border-radius:3px;
+    font-weight:600;text-decoration:none;font-size:0.92rem;
+  }
+  .hero-photo{
+    flex:0 0 220px;width:220px;height:260px;border:2px solid var(--gold);border-radius:4px;overflow:hidden;
+    background:linear-gradient(160deg,#1a2a55,#0a1329);display:flex;align-items:center;justify-content:center;
+    color:var(--gold-soft);font-family:'Fraunces',serif;font-size:0.85rem;text-align:center;padding:20px;
+  }
+
+  /* Pillars strip */
+  .pillars{background:var(--gold-soft);border-bottom:1px solid rgba(16,29,62,0.1);}
+  .pillars-inner{
+    max-width:1100px;margin:0 auto;padding:22px 24px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
+  }
+  .pillar-chip{
+    background:#fff;border:1px solid var(--gold);color:var(--navy);padding:8px 20px;border-radius:999px;
+    font-weight:600;font-size:0.85rem;
+  }
+
+  main{max-width:1100px;margin:0 auto;padding:0 24px;}
+  section{padding:70px 0;border-bottom:1px solid rgba(16,29,62,0.08);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{margin-bottom:36px;}
+  .section-num{color:var(--gold);font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-top:6px;color:var(--navy);}
+
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+  .card{
+    background:#fff;border:1px solid rgba(16,29,62,0.1);border-left:4px solid var(--gold);
+    border-radius:4px;padding:22px 24px;
+  }
+  .card h3{font-size:1.05rem;color:var(--navy);margin-bottom:8px;font-weight:600;}
+  .card p{color:var(--slate);font-size:0.94rem;}
+
+  .who-table{background:#fff;border:1px solid rgba(16,29,62,0.1);border-radius:6px;overflow:hidden;}
+  .who-row{display:flex;flex-wrap:wrap;padding:20px 24px;border-bottom:1px solid var(--gold-soft);}
+  .who-row:last-child{border-bottom:none;}
+  .who-row .label{flex:0 0 160px;font-weight:700;color:var(--navy);}
+  .who-row .value{flex:1 1 300px;color:var(--slate);}
+
+  .vision-split{display:grid;grid-template-columns:1.4fr 1fr;gap:20px;}
+  @media (max-width:760px){.vision-split{grid-template-columns:1fr;}}
+  .vision-list p{margin-bottom:16px;color:var(--slate);}
+  .vision-list b{color:var(--navy);}
+  .pillar-side{background:var(--navy);color:#fff;border-radius:6px;padding:26px;}
+  .pillar-side h4{color:var(--gold);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;}
+  .pillar-side ul{list-style:none;}
+  .pillar-side li{padding:9px 0;border-top:1px solid rgba(255,255,255,0.12);font-weight:500;}
+  .pillar-side li:first-child{border-top:none;}
+
+  .promise-block{background:var(--navy);color:#fff;border-radius:8px;padding:40px;text-align:center;margin-top:20px;}
+  .promise-block p{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--gold-soft);max-width:640px;margin:0 auto;}
+
+  footer{
+    background:var(--navy-deep);color:#aab2ca;text-align:center;padding:36px 24px;font-size:0.85rem;
+  }
+  footer .btn-primary{margin-top:14px;}
+  footer strong{color:#fff;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">SARANDA <span>&middot;</span> Arshan Ali Khan</div>
+    <nav>
+      <ul>
+        <li><a href="#who">Who Am I</a></li>
+        <li><a href="#why">Why Contest</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#plan">Action Plan</a></li>
+        <li><a href="#beyond">Beyond Academics</a></li>
+        <li><a href="#promise">Promise</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="manifesto.pdf" download>Download PDF</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">IIT Madras Election 2026&ndash;27</div>
+      <h1>Arshan Ali Khan</h1>
+      <div class="role">Candidate for Regional Coordinator &middot; Lucknow Region</div>
+      <blockquote>"From Concrete to Cloud, Building Community"</blockquote>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="manifesto.pdf" download>&#8681; Download Manifesto (PDF)</a>
+        <a class="btn-secondary" href="#who">Read the Full Manifesto</a>
+      </div>
+    </div>
+    <div class="hero-photo">Candidate Photo</div>
+  </div>
+</section>
+
+<div class="pillars">
+  <div class="pillars-inner">
+    <div class="pillar-chip">Connected</div>
+    <div class="pillar-chip">Supportive</div>
+    <div class="pillar-chip">Action-Driven</div>
+  </div>
+</div>
+
+<main>
+
+  <section id="who">
+    <div class="section-head">
+      <div class="section-num">01</div>
+      <h2>Who Am I?</h2>
+    </div>
+    <div class="who-table">
+      <div class="who-row"><div class="label">Education</div><div class="value">Dual-degree student: BS Data Science and Applications at IIT Madras and B.Tech CSE at RIMT (AKTU), with a Civil Engineering Diploma from AMU.</div></div>
+      <div class="who-row"><div class="label">Focus</div><div class="value">Working at the intersection of AI and civil engineering. Laid foundations with Civil, built logic with Code, and found insight through Data, engineering the future from ground to cloud.</div></div>
+      <div class="who-row"><div class="label">Roles at IITM</div><div class="value">Graphic Designer, Content Creator, and Outreach, since mid-2025.</div></div>
+      <div class="who-row"><div class="label">Memberships</div><div class="value">Student member of ASCE, ACI, and ICE, with 20+ publications. Selected for the Stanford Faculty Mentorship Cohort and HBS Foundry (Harvard Business School's entrepreneurship platform).</div></div>
+      <div class="who-row"><div class="label">Track Record</div><div class="value">Organized the first-ever Saranda House meetup at Bareilly. Invited by IIT Madras for a podcast feature on my achievements.</div></div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <h2>Why Am I Contesting?</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card"><h3>Active Representation</h3><p>Every student deserves a representative who listens before speaking and acts before making promises.</p></div>
+      <div class="card"><h3>Connecting Students</h3><p>Some students miss updates or hesitate to ask questions. I want to bridge that gap for the Lucknow region.</p></div>
+      <div class="card"><h3>University Intermediary</h3><p>I want to improve communication between students and the Saranda House Council.</p></div>
+      <div class="card"><h3>Actionable Feedback</h3><p>I want every student's concern and suggestion to reach the right people.</p></div>
+      <div class="card"><h3>Always Available</h3><p>I want every student to know that help is always within reach.</p></div>
+    </div>
+  </section>
+
+  <section id="vision">
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <h2>My Vision for Lucknow Region</h2>
+    </div>
+    <div class="vision-split">
+      <div class="vision-list">
+        <p><b>Connected Community:</b> Build a welcoming student community where everyone feels connected regardless of location.</p>
+        <p><b>Peer Collaboration:</b> Create a culture of collaboration instead of competition through peer learning.</p>
+        <p><b>Regular Meetups:</b> Continue that momentum with more regional gatherings across the Lucknow region.</p>
+        <p><b>Respectful Dialogue:</b> Promote respect, inclusion, and positive communication in every interaction.</p>
+        <p><b>Active Participation:</b> Build a region where every student feels confident to ask questions and share ideas.</p>
+      </div>
+      <div class="pillar-side">
+        <h4>Core Pillars</h4>
+        <ul>
+          <li>Inclusive Community</li>
+          <li>Peer Collaboration</li>
+          <li>Consistent Communication</li>
+          <li>Active Presence</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="plan">
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <h2>My Action Plan</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Regional Meetups</h3>
+        <p>Continue organizing offline meetups across the region, with sharper focus on tech events and sports meetups so students can meet and collaborate in person. Taking inspiration from meetups happening at IIT Madras and Delhi, I will reach out to fellow regions and approach big tech companies to host or co-host our next meetups.</p>
+      </div>
+      <div class="card">
+        <h3>Communication</h3>
+        <p>Send regular updates for assignment deadlines, exams, notices, and university announcements, so nobody misses a deadline.</p>
+      </div>
+      <div class="card">
+        <h3>Student Support</h3>
+        <p>Be available to guide students with academic and general queries, and connect them with the right resources whenever they need help.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="beyond">
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <h2>Beyond Academics</h2>
+    </div>
+    <div class="vision-split">
+      <div class="vision-list">
+        <p><b>Technical Events:</b> Promote hackathons, workshops, and webinars across the region.</p>
+        <p><b>Emerging Technologies:</b> Encourage students to learn cutting-edge skills such as AI and data science.</p>
+        <p><b>Mentorship &amp; Sharing:</b> Connect juniors with seniors to facilitate structured mentorship and knowledge sharing.</p>
+        <p><b>Networking Sessions:</b> Organize interactive sessions to help students build strong professional connections.</p>
+        <p><b>Celebrate Achievements:</b> Recognize student success and promote active participation in community initiatives.</p>
+      </div>
+      <div class="pillar-side">
+        <h4>Key Focus</h4>
+        <ul>
+          <li>Practical Skills</li>
+          <li>Future-Ready</li>
+          <li>Peer Support</li>
+          <li>Active Presence</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="promise">
+    <div class="section-head">
+      <div class="section-num">06</div>
+      <h2>My Promise to Every Student</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card"><h3>Honesty, Commitment &amp; Effort</h3><p>I cannot promise perfection, but I promise honesty, commitment, and consistent effort.</p></div>
+      <div class="card"><h3>Transparency &amp; Accountability</h3><p>I will always remain approachable, transparent, and accountable.</p></div>
+      <div class="card"><h3>Active Listening</h3><p>Every suggestion will be heard. Every genuine concern will receive attention.</p></div>
+      <div class="card"><h3>Students First</h3><p>Students will always come first in every decision I make.</p></div>
+    </div>
+    <div class="promise-block">
+      <p>Together, let's build a Lucknow Region that is more connected, informed, supportive, and future-ready.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div><strong>Arshan Ali Khan</strong> &middot; Regional Coordinator Candidate &middot; IIT Madras Election 2026&ndash;27</div>
+  <a class="btn-primary" href="manifesto.pdf" download>&#8681; Download Full Manifesto (PDF)</a>
+</footer>
+
+</body>
+</html>
